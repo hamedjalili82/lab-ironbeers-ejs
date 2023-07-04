@@ -1,0 +1,64 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Beer</title>
+  <style>
+    /* Add your styling here */
+    .beer-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 50px;
+    }
+
+    .beer-image {
+      width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .beer-name {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .beer-tagline {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .beer-description {
+      margin-bottom: 10px;
+    }
+
+    .beer-food-pairing {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .beer-brewer-tips {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="beer-container">
+    <img class="beer-image" src="<%= beer.image_url %>" alt="Beer Image">
+    <h2 class="beer-name"><%= beer.name %></h2>
+    <p class="beer-tagline"><%= beer.tagline %></p>
+    <p class="beer-description"><%= beer.description %></p>
+    <p class="beer-food-pairing">Food Pairing:</p>
+    <ul>
+      <% beer.food_pairing.forEach(function(food) { %>
+        <li><%= food %></li>
+      <% }); %>
+    </ul>
+    <p class="beer-brewer-tips">Brewer Tips: <%= beer.brewers_tips %></p>
+  </div>
+</body>
+</html>

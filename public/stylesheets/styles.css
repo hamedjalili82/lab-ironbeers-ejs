@@ -5,3 +5,18 @@ dark-blue: #0a2c42;
 grey: #bfbfbf;
 font-family: Arial, Helvetica, sans-serif;
 */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    border: none;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  
+  .btn:hover {
+    background-color: #ddd;
+  }
+  

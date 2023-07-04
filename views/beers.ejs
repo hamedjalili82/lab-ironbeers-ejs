@@ -1,0 +1,11 @@
+<h1>Beers Page</h1>
+<p>List of available beers goes here.</p>
+
+<% data.forEach(beer => { %>
+  <div class="beer">
+    <img src="<%= beer.image_url %>" alt="<%= beer.name %>">
+    <h2><%= beer.name %></h2>
+    <p><%= beer.description %></p>
+    <p><em><%= beer.tagline %></em></p>
+  </div>
+<% }) %>
