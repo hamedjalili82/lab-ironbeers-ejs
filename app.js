@@ -71,9 +71,10 @@ app.get("/beers", (request, response) => {
 app.get('/random-beer', (req, res) => {
   punkAPI
   .getRandom()
-    .then(responseFromAPI => {
-      const beer = responseFromAPI[0]; // Assuming the response is an array of beers, and you want the first one
-      res.render('random-beer', { beer});
+    .then(beer => {
+      // const beer = beer[0]; // Assuming the response is an array of beers, and you want the first one
+      console.log('here is the random beer');
+      res.render('random-beer', { beer: beer[0]});
     })
     .catch(error => console.log(error));
 });
